@@ -1,0 +1,220 @@
+{
+  "data": [
+    {
+      "keywords": ["NP", "noun phrase"],
+      "tree": {
+        "name": "NP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "N'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "N",
+            "head": "noun",
+            "sub": "",
+            "children": []
+          }]
+        }]
+      }
+    },
+    {
+      "keywords": ["VP", "verb phrase"],
+      "tree": {
+        "name": "VP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "V'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "V",
+            "head": "verb",
+            "sub": "",
+            "children": []
+          }]
+        }]
+      }
+    },
+    {
+      "keywords": ["AdvP", "adverb phrase"],
+      "tree": {
+        "name": "AdvP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "Adv'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "Adv",
+            "head": "adverb",
+            "sub": "",
+            "children": []
+          }]
+        }]
+      }
+    },
+    {
+      "keywords": ["AdjP", "adjective phrase"],
+      "tree": {
+        "name": "AdjP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "Adj'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "Adj",
+            "head": "adjective",
+            "sub": "",
+            "children": []
+          }]
+        }]
+      }
+    },
+    {
+      "keywords": ["DP", "determiner phrase"],
+      "tree": {
+        "name": "DP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "D'",
+          "head": "",
+          "sub": "",
+          "children": [
+            {
+              "name": "D",
+              "head": "det",
+              "sub": "",
+              "children": []
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "keywords": ["CP", "clause phrase"],
+      "tree": {
+        "name": "CP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "C'",
+          "head": "",
+          "sub": "",
+          "children": [
+            {
+              "name": "C",
+              "head": "clause",
+              "sub": "",
+              "children": []
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "keywords": ["TP", "tense phrase", "basic sentence", "sentence"],
+      "tree": {
+        "name": "TP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "DP",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "D'",
+            "head": "",
+            "sub": "",
+            "children": [{
+              "name": "D",
+              "head": "det",
+              "sub":"",
+              "children": []
+            }, {
+              "name": "NP",
+              "head": "",
+              "sub": "",
+              "children": [{
+                "name": "N'",
+                "head": "",
+                "sub": "",
+                "children": [{
+                  "name": "N",
+                  "head": "noun",
+                  "sub": "",
+                  "children": []
+                }]
+              }]
+            }]
+          }]
+        },
+        {
+          "name": "T'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "T",
+            "head": "[-pst]",
+            "sub": "",
+            "children": []
+          },
+          {
+            "name": "VP",
+            "head": "",
+            "sub": "",
+            "children": [{
+              "name": "V'",
+              "head": "",
+              "sub": "",
+              "children": [{
+                "name": "V",
+                "head": "verb",
+                "sub": "",
+                "children": []
+              },
+              {
+                "name": "DP",
+                "head": "",
+                "sub": "",
+                "children": [{
+                  "name": "D'",
+                  "head": "",
+                  "sub": "",
+                  "children": [{
+                    "name": "D",
+                    "head": "det",
+                    "sub": "",
+                    "children": []
+                  },
+                  {
+                    "name": "NP",
+                    "head": "",
+                    "sub": "",
+                    "children": [{
+                      "name": "N'",
+                      "head": "",
+                      "sub": "",
+                      "children": [{
+                        "name": "N",
+                        "head": "noun",
+                        "sub": "",
+                        "children": []
+                      }]
+                    }]
+                  }]
+                }]
+              }]
+            }]
+          }]
+        }]
+      }
+    }
+  ]
+}

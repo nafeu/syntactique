@@ -1,0 +1,91 @@
+{
+  "data": [{
+    "name": "TP",
+    "head": "",
+    "sub": "",
+    "children": [{
+      "name": "DP",
+      "head": "",
+      "sub": "",
+      "children": [{
+        "name": "D'",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "D",
+          "head": "The",
+          "sub": "",
+          "children": []
+        }, {
+          "name": "NP",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "N'",
+            "head": "",
+            "sub": "",
+            "children": [{
+              "name": "N",
+              "head": "verb",
+              "sub": "",
+              "children": []
+            }]
+          }]
+        }]
+      }]
+    }, {
+      "name": "T'",
+      "head": "",
+      "sub": "",
+      "children": [{
+        "name": "T",
+        "head": "[-pst]",
+        "sub": "",
+      }, {
+        "name": "VP",
+        "head": "",
+        "sub": "",
+        "children": [{
+          "name": "V'",
+          "head": "",
+          "sub": "",
+          "children": [{
+            "name": "V",
+            "head": "loves",
+            "sub": "",
+          }, {
+            "name": "DP",
+            "head": "",
+            "sub": "",
+            "children": [{
+              "name": "D'",
+              "head": "",
+              "sub": "",
+              "children": [{
+                "name": "D",
+                "head": "the",
+                "sub": "",
+                "children": []
+              }, {
+                "name": "NP",
+                "head": "",
+                "sub": "",
+                "children": [{
+                  "name": "N'",
+                  "head": "",
+                  "sub": "",
+                  "children": [{
+                    "name": "N",
+                    "head": "noun",
+                    "sub": "",
+                    "children": []
+                  }]
+                }]
+              }]
+            }]
+          }]
+        }]
+      }]
+    }]
+  }]
+}

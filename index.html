@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Syntactique | UofT CFL Tools</title>
+    <link rel="stylesheet" href="./vendor/font-awesome.css">
+    <link rel="stylesheet" href="./vendor/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./vendor/d3.v3.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <p id="credits">This project is supported by the CFL, CTL, and Provost's Office OUCI Funding</p>
+    <div id="header">
+      <h3 class="brand">syntactique<span id="sub">&nbsp;: : syntax tree builder</span></h3>
+      <div id="toolbar">
+        <div id="toolbtn-edit" onclick="setSelectedTool('edit')" class="toolbtn-opt toolbtn-purple"><i aria-hidden="true" class="fa fa-pencil"></i>EDIT</div>
+        <div id="toolbtn-add" onclick="setSelectedTool('add')" class="toolbtn-opt toolbtn-green"><i aria-hidden="true" class="fa fa-plus"></i>ADD</div>
+        <div id="toolbtn-move" onclick="setSelectedTool('move')" class="toolbtn-opt toolbtn-blue"><i aria-hidden="true" class="fa fa-arrows"></i>MOVE</div>
+        <div id="toolbtn-delete" onclick="setSelectedTool('delete')" class="toolbtn-opt toolbtn-red"><i aria-hidden="true" class="fa fa-remove"></i>DELETE</div>
+        <div id="toolbtn-build" onclick="setSelectedTool('build')" class="toolbtn-opt toolbtn-orange"><i aria-hidden="true" class="fa fa-magic"></i>BUILD</div>
+        <div onclick="undo()" class="solo-button"><i aria-hidden="true" class="fa fa-undo"></i>UNDO</div>
+        <div class="group-button">WIDTH<i id="toolbtn-width-minus" aria-hidden="true" onclick="shrinkTreeWidth()" class="fa fa-minus-square"></i><i id="toolbtn-width-plus" aria-hidden="true" onclick="growTreeWidth()" class="fa fa-plus-square"></i></div>
+        <div class="group-button">HEIGHT<i id="toolbtn-height-minus" aria-hidden="true" onclick="shrinkTreeHeight()" class="fa fa-minus-square"></i><i id="toolbtn-height-plus" aria-hidden="true" onclick="growTreeHeight()" class="fa fa-plus-square"></i></div>
+        <div class="group-button">SIZE<i id="toolbtn-size-minus" aria-hidden="true" onclick="shrinkNodeSize()" class="fa fa-minus-square"></i><i id="toolbtn-size-plus" aria-hidden="true" onclick="growNodeSize()" class="fa fa-plus-square"></i></div>
+        <div id="toolbtn-reset" onclick="resetRenderDefaults()" class="solo-button"><i aria-hidden="true" class="fa fa-refresh"></i>RESET SIZING</div>
+        <div onclick="restart()" class="solo-button"><i aria-hidden="true" class="fa fa-eject"></i>RESTART</div>
+        <div onclick="window.location.href = 'https://www.youtube.com/watch?v=FTF8LdKE01M&list=PL1B3Q2e__PmlxkvPF6Dj4L4QVdrbBpKzm'" class="solo-button"><i aria-hidden="true" class="fa fa-video-camera"></i>TUTORIALS</div>
+      </div>
+      <div id="toolconfig"><i id="sliders-icon" aria-hidden="true" class="fa fa-sliders"></i>
+        <div id="toolsetting-edit" class="toolsetting animated fadeInDown">
+          <div data-setting="disabled" class="setting">edit</div>
+        </div>
+        <div id="toolsetting-add" class="toolsetting animated fadeInDown">
+          <div id="setting-add-selection_toggle" onclick="rotateSetting('add-selection_type')" class="setting-static">selection type :&nbsp;<span id="setting-add-selection_type"></span></div>: :
+          <div id="setting-add-edit_on_create" data-setting="disabled" onclick="toggleSetting('add-edit_on_create')" class="setting">edit on create<i class="fa fa-toggle-off toggle-icon"></i></div>: :
+          <div id="setting-add-auto_complete_phrase" data-setting="disabled" onclick="toggleSetting('add-auto_complete_phrase')" class="setting">auto complete phrase<i class="fa fa-toggle-off toggle-icon"></i></div>
+        </div>
+        <div id="toolsetting-move" class="toolsetting animated fadeInDown">
+          <div data-setting="disabled" class="setting">move</div>
+        </div>
+        <div id="toolsetting-delete" class="toolsetting animated fadeInDown">
+          <div data-setting="disabled" class="setting">delete</div>
+        </div>
+        <div id="toolsetting-build" class="toolsetting animated fadeInDown">
+          <div data-setting="disabled" class="setting">build</div>
+        </div>
+      </div>
+      <div id="sentence-input">
+        <textarea id="sentence-content" placeholder="Enter Sentence or Phrase"></textarea>
+      </div>
+    </div>
+    <div id="main"></div>
+    <script src="./js/syntactique-model.js"></script>
+    <script src="./js/syntactique-ui.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
